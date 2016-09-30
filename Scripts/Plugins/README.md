@@ -1,0 +1,1 @@
+Keep plugin scripts here.
