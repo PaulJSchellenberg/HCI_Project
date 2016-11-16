@@ -1,0 +1,76 @@
+<Html>
+	<head>
+		<title>Payment</title>
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="payment.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<H1>UMES Locker Registration</h1>
+		<div id = "paymentDetails" style = "float:left" class = "hide">
+			
+			<div>
+				<h2>Payment</h2>
+			</div>
+			<H3 onClick = "creditChosen()">Credit Card</H3>
+			<div id = "CreditCard" class = "hide">
+				
+				<p>
+				<img src="images/Mastercard.png" alt="Mastercard" style ="width:75px; height:59px; float:left">
+				
+				<img src="images/visa.jpg" alt="Mastercard" style ="width:136px; height:59px; float:left">
+				</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<form>
+					Credit Card Number: <input type="Number" id="Number" ><br>
+					Expiration Date: <input type="text" id="Expire"><br>
+					CVV: <input type="number" id="CVV"><br>
+				</form>
+				
+					<input type="submit" value="Submit" onclick = "submitClicked()">
+			</div>
+			<H3 onclick="payPalChosen()">PayPal</H3>
+			<div id="PayPal" class = "hide">
+				<a href = "PayPal.html"><img src="images/PayPal.jpg" alt="PayPal Button" style ="width:133; height:48px;"></a>
+			</div>
+			<H3 onclick="cashChosen()">Cash Payment</H3>
+			<div id = "Cash" class = "hide">
+				
+				<p>I would like to pay in cash at the Window (E2-whatever)<br></p>
+				<input type="submit" value="Submit" onclick = "submitClicked()">
+			</div>
+			
+		</div>
+		
+		<div id="cashDetails" style = "float:left" class = "hide">
+			<h2>Cash Payment</h2>
+			<p id = "CashInfo" >Please pay your balance of $10 before 09-25-2017. <br>If you do not, your locker may be sold to someone who pays on time. </p>
+
+			<input type="submit" value="Okay" onclick="location.href='index.html';">
+		</div>
+		
+		<div id="receipt" style = "float:left" width = 45 class = "hide">
+			
+			<div>
+				<h2>Receipt</h2>
+			</div>
+			<div>
+				<p id = "ReceiptInfo" ></p>
+			</div>
+			<input type="submit" value="Okay" onclick="location.href='index.html';">
+		</div>
+		
+		<div id = "Summary" style="float:right">
+			<H2>Locker Summary</H2>
+			<p id="testing">Locker Number: 123</p>
+			<p>Building: E2</p>
+			<p>Floor: 3</p>
+		</div>
+	</body>
+
+</Html>
